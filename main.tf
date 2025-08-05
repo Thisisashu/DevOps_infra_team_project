@@ -7,7 +7,7 @@ module "resource-group" {
 }   
 
 module "network" {
-   source="./modules/networking/vnet"
+   source="./modules/Ashu-networking/vnet"
    resource_group_name = var.resource_group_name
    location = var.location
    vnet_name = var.vnet_name
@@ -20,7 +20,7 @@ module "network" {
 }
 
 module "load-balancer" {
-    source = "./modules/networking/loadbalancer"
+    source = "./modules/Ashu-networking/loadbalancer"
     resource_group_name = var.resource_group_name
     location = var.location
     number_of_machines = var.virtual_machine_count
