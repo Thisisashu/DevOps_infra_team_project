@@ -1,0 +1,14 @@
+# Ignore Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+terraform.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# If you want to ignore your provider config (not recommended for teams)
+providers.tf
