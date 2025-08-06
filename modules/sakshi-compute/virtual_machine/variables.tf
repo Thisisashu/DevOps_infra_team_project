@@ -7,3 +7,7 @@ variable "location" {
   type= string
   description = "This defines the location of the resource group and the resources"
 }
+variable "admin_username" {
+  type = string
+  description = "This defines the username for the vm"
+}

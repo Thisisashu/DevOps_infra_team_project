@@ -3,11 +3,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
   resource_group_name = var.resource_group_name
   location            = var.location
   size                = "Standard_B1s"
-  admin_username      = "azureuser"
+  admin_username      = var.admin_username
   network_interface_ids = [azurerm_network_interface.nic.id]
 
   admin_ssh_key {
-    username   = "azureuser"
+    username   = var.admin_username
     public_key = file("~/.ssh/id_rsa.pub") 
   }
 

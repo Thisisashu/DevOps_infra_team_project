@@ -39,4 +39,9 @@ module "azure-keyvault" {
   location            = var.location
   resource_group_name = var.resource_group_name
   }
-
+module "virtual_machine" {
+  source              = "./modules/sakshi-compute/virtual_machine"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  admin_username      = var.admin_username
+}

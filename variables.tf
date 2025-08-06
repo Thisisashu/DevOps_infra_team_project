@@ -52,3 +52,7 @@ variable "key_vault" {
   type = string
   description = "This defines the name of azure key vault"
 }
+variable "admin_username" {
+  type = string
+  description = "This defines the username for the vm"
+}
