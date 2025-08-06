@@ -28,3 +28,11 @@ module "load-balancer" {
     network_interface_private_ip_address = module.network.network_interface_private_ip_address
 
 }
+
+module "azure-keyvault" {
+  source              = "./modules/Ashu-networking/azure-keyvault"
+  key_vault = "examplekv-${random_string.suffix.result}"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  }
+

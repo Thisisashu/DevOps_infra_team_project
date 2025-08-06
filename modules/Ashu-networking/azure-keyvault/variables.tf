@@ -7,4 +7,7 @@ variable "location" {
   type= string
   description = "This defines the location of the resource group and the resources"
 }
-
+variable "key_vault" {
+  type = string
+  description = "This defines the name of azure key vault"
+}

@@ -48,3 +48,7 @@ variable "virtual_machine_count" {
     description = "This provides the number of virtual machines"
   
 }
+variable "key_vault" {
+  type = string
+  description = "This defines the name of azure key vault"
+}
