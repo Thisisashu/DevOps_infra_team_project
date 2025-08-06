@@ -4,7 +4,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   location            = var.location
   size                = "Standard_B1s"
   admin_username      = var.admin_username
-  network_interface_ids = [azurerm_network_interface.nic.id]
+  network_interface_ids = [var.network_interface_id]
 
   admin_ssh_key {
     username   = var.admin_username
@@ -18,7 +18,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
  source_image_reference {
   publisher = "Canonical"
-  offer     = "UbuntuServer"
+  offer     = "0001-com-ubuntu-server-focal"
   sku       = "20_04-lts"
   version   = "latest"
 }

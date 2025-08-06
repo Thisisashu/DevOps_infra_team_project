@@ -11,3 +11,7 @@ variable "admin_username" {
   type = string
   description = "This defines the username for the vm"
 }
+variable "network_interface_id" {
+  description = "ID of the network interface to attach to the VM"
+  type        = string
+}

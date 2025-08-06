@@ -44,4 +44,5 @@ module "virtual_machine" {
   resource_group_name = var.resource_group_name
   location            = var.location
   admin_username      = var.admin_username
+  network_interface_id = module.network.virtual_network_interfaces_ids[0]
 }
